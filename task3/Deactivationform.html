@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De-Activation</title>
+    <style>
+        body{
+            font-family:'Times New Roman', Times, serif;
+            margin: 0;
+            padding-left: 345px; 
+            display: block;
+            background:rgba(0,0,0,0.1) ;
+        }   
+        .container{
+            background-color: rgb(170, 232, 211);
+            color:black;
+            width: 80%;
+            max-width: 650px;
+            box-shadow:rgb(26, 26, 26);
+            border :1px solid black;
+            border-radius: 8px;
+            margin: 50px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        fieldset {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            background-color: #fafafa;
+        }input[type="text"],
+        input[type="select"],
+        select {
+            width: 95%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #0077b5;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+        }  
+        h1{
+            text-align: center;
+            color: rgb(65, 45, 21);
+        } 
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>DEACTIVATION FORM </h1>
+        <fieldset>
+            <legend>Personal Information:</legend>
+            <label for="fname">Full Name</label>
+            <input type="text" name="fname" id="fname" required> <br><br>
+            <label for="CI">Contact Information (phone number, email address)</label>
+            <input type="text" name="CI" id="CI" required><br><br>
+            <label for="user">Account Number or User ID (if applicable)</label>
+            <input type="text" name="user" id="user"><br>
+        </fieldset><br>
+        <fieldset>
+            <legend>Reason for Deactivation:</legend>
+            <label for="RfD">A brief explanation for why you want to deactivate the service or account.</label><br>
+            <textarea name="RfD" id="RfD" rows="05" cols="15" required> Reasons Of xyz</textarea>
+        </fieldset><br>
+        <fieldset>
+            <legend>Service Details:</legend>
+            <label for="accountType">Type of service or account you want to deactivate</label><br>
+            <select id="accountType" name="accountType" required>
+                <option value="">Select an option</option>
+                <option value="email">Email Account</option>
+                <option value="subscription">Subscription Service</option>
+                <option value="membership">Membership</option>
+                <option value="onlineStore">Online Store Account</option>
+                <option value="socialMedia">Social Media Account</option>
+            </select><br><br>
+        </fieldset><br>
+        <fieldset>
+            <label for="terms">
+            <input type="checkbox" name="terms" id="terms" required>
+                I agree to the Deactivation form<a href="#">Terms of Service </a> and <a href="#">Privacy Policy </a>
+            </label><br><br>
+                <button type="submit">Sign up</button>        
+                <button type="reset">Reset</button>
+        </fieldset>
+    </div>
+</body>
+</html>
