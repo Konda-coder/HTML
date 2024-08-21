@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+    <style>
+        h1{
+            text-align: center; 
+        }
+        body{
+            margin-left: 15%;
+            margin-right: 20%;
+        }
+</style>
+</head>
+<body>
+    <h1>Login Form</h1>
+    <form action="forms.html">
+        <fieldset>
+            <legend>Login Details</legend>
+            <label for="name">User Name:</label>
+            <input type="text" id="name" name="name"><br><br>
+            <label for="pswd">Password:</label>
+            <input type="password" id="pswd" name="pswd"><br><br>
+            <label for="ID">ID:</label>
+            <input type="text" id="ID" name="ID"><br><br>
+            <label for="mobile">mobile number:</label>
+            <input type="phone" id="mobile" name="mobile"><br><br>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email"><br><br>
+            <label for="alt">Alternate mobile:</label>
+            <input type="" id="alt" name="alt"><br><br>
+            <input type="submit" onclick="save()">
+            <input type="reset">
+        </fieldset>
+    </form>
+    <script>
+        function save()
+        {
+            if (typeof(Storage) !== "undefined") 
+            {
+                var r=document.getElementById("name").value;
+                localStorage.setItem("f1",r);
+                var v=document.getElementById("pswd").value;
+                localStorage.setItem("p1",v);
+              //  localStorage.clear();
+              alert(r);
+            }
+
+        }
+    </script>
+</body>
+</html>
